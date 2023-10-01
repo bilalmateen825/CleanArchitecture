@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EZBooking.Domain.Apartments
+namespace EZBooking.Domain.Common
 {
     public record Money(decimal Amount, Currency Currency)
     {
@@ -20,5 +20,15 @@ namespace EZBooking.Domain.Apartments
         }
 
         public static Money Zero() => new Money(0, Currency.None);
+
+        public static Money Zero(Currency currency)
+        {
+            return new Money(0, currency);
+        }
+
+        public bool IsZero()
+        {
+            return this == Zero(Currency);
+        }
     }
 }

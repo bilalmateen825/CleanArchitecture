@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EZBooking.Domain.Apartments
+namespace EZBooking.Domain.Common
 {
     public record Currency
     {
         internal static readonly Currency None = new Currency("");
         public static readonly Currency USD = new Currency("USD");
         public static readonly Currency CAD = new Currency("CAD");
-        public static readonly Currency EUR = new ("EUR");
+        public static readonly Currency EUR = new("EUR");
         public Currency(string stCode)
         {
             Code = stCode;
