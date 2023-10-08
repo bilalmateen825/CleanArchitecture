@@ -1,4 +1,5 @@
-﻿using EZBooking.Domain.Bookings;
+﻿using EZBooking.Application.Abstractions.Behaviors;
+using EZBooking.Domain.Bookings;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,9 @@ namespace EZBooking.Application
                 //Query & Query handler
                 conf.RegisterServicesFromAssemblies(typeof(DependencyInjection).Assembly);
                 //typeof(DependencyInjection).Assembly is consequently the Application project
+
+                conf.AddOpenBehavior(typeof(LoggingBehavior<,>));
+                conf.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
 
             services.AddTransient<PricingService>();
