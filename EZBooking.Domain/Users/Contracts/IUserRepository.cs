@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EZBooking.Domain.Users.Contracts
+namespace EZBooking.Domain.Users
 {
     public interface IUserRepository
     {
-        Task<User> GetById(Guid id, CancellationToken cancellationToken = default);
+        Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
         void Add(User user);
     }
 }

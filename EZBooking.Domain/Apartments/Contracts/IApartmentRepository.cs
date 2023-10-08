@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EZBooking.Domain.Apartments.Contracts
+namespace EZBooking.Domain.Apartments
 {
-    internal interface IApartmentRepository
+    public interface IApartmentRepository
     {
-        Task<Apartment> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<Apartment?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }

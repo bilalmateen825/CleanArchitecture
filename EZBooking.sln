@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{381CC57F-6E9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{374499D3-733A-4D66-B74E-ADC0B44C2446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZBooking.Domain", "EZBooking.Domain\EZBooking.Domain.csproj", "{ADB0D959-0352-47A4-AD69-37F2FFCED5D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EZBooking.Domain", "EZBooking.Domain\EZBooking.Domain.csproj", "{ADB0D959-0352-47A4-AD69-37F2FFCED5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZBooking.Application", "EZBooking.Application\EZBooking.Application.csproj", "{37EDA40A-21BA-41A9-82F9-ADCD412F5172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{ADB0D959-0352-47A4-AD69-37F2FFCED5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADB0D959-0352-47A4-AD69-37F2FFCED5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADB0D959-0352-47A4-AD69-37F2FFCED5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EDA40A-21BA-41A9-82F9-ADCD412F5172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EDA40A-21BA-41A9-82F9-ADCD412F5172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EDA40A-21BA-41A9-82F9-ADCD412F5172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EDA40A-21BA-41A9-82F9-ADCD412F5172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ADB0D959-0352-47A4-AD69-37F2FFCED5D6} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
+		{37EDA40A-21BA-41A9-82F9-ADCD412F5172} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9539C22A-C752-45D1-81F5-D401B4534E08}
