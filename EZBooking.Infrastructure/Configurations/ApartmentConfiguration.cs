@@ -41,6 +41,7 @@ namespace EZBooking.Infrastructure.Configurations
                     .HasConversion(currency => currency.Code, code => Currency.GetCurrencyFromCode(code));
                 });
 
+            builder.Property<uint>("Version").IsRowVersion();
         }
     }
 }

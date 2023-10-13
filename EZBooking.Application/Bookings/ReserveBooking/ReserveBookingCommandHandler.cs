@@ -1,5 +1,6 @@
 ﻿using EZBooking.Application.Abstractions.Clock;
 using EZBooking.Application.Abstractions.Messaging;
+using EZBooking.Application.Exceptions;
 using EZBooking.Domain.Abstractions;
 using EZBooking.Domain.Apartments;
 using EZBooking.Domain.Bookings;
@@ -66,18 +67,25 @@ namespace EZBooking.Application.Bookings.ReserveBooking
                 return Result.Failure<Guid>(BookingErrors.Overlap);
             }
 
-            var booking = Booking.Reserve(
-                apartment,
-                user.Id,
-                duration,
-                m_dateTimeProvider.UtcNow,
-                m_pricingService);
+            try
+            {
+                var booking = Booking.Reserve(
+                    apartment,
+                    user.Id,
+                    duration,
+                    m_dateTimeProvider.UtcNow,
+                    m_pricingService);
 
-            m_bookingRepository.Add(booking);
+                m_bookingRepository.Add(booking);
 
-            await m_unitOfWork.SaveChangesAsync(cancellationToken);
+                await m_unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return booking.Id;
+                return booking.Id;
+            }
+            catch (ConcurrencyException)
+            {
+                return Result.Failure<Guid>(BookingErrors.Overlap);
+            }
         }
     }
 }
