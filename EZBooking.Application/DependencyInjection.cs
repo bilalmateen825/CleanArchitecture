@@ -1,5 +1,6 @@
 ﻿using EZBooking.Application.Abstractions.Behaviors;
 using EZBooking.Domain.Bookings;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,9 @@ namespace EZBooking.Application
                 conf.AddOpenBehavior(typeof(LoggingBehavior<,>));
                 conf.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
+
+
+            services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
             services.AddTransient<PricingService>();
 

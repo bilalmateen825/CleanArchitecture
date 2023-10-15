@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EZBooking.Domain", "EZBooki
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EZBooking.Application", "EZBooking.Application\EZBooking.Application.csproj", "{37EDA40A-21BA-41A9-82F9-ADCD412F5172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZBooking.Infrastructure", "EZBooking.Infrastructure\EZBooking.Infrastructure.csproj", "{4FD10499-0F88-4E04-959B-23798DE316DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EZBooking.Infrastructure", "EZBooking.Infrastructure\EZBooking.Infrastructure.csproj", "{4FD10499-0F88-4E04-959B-23798DE316DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZBooking.API", "EZBooking.API\EZBooking.API.csproj", "{59932C3E-29EC-4C70-8F6D-009F612ED72A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{4FD10499-0F88-4E04-959B-23798DE316DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD10499-0F88-4E04-959B-23798DE316DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FD10499-0F88-4E04-959B-23798DE316DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59932C3E-29EC-4C70-8F6D-009F612ED72A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59932C3E-29EC-4C70-8F6D-009F612ED72A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59932C3E-29EC-4C70-8F6D-009F612ED72A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59932C3E-29EC-4C70-8F6D-009F612ED72A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{ADB0D959-0352-47A4-AD69-37F2FFCED5D6} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
 		{37EDA40A-21BA-41A9-82F9-ADCD412F5172} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
 		{4FD10499-0F88-4E04-959B-23798DE316DD} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
+		{59932C3E-29EC-4C70-8F6D-009F612ED72A} = {381CC57F-6E91-4558-8692-CF635FE9FCFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9539C22A-C752-45D1-81F5-D401B4534E08}
